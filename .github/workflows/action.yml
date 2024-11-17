@@ -1,0 +1,18 @@
+name: YouTrack Issue Move
+
+on:
+  pull_request:
+    types: [opened]
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: bloobirds-it/action-youtrack-move@v1.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          yt-url: ${{ secrets.YOUTRACK_URL }}
+          yt-token: ${{ secrets.YOUTRACK_TOKEN }}
+          yt-project-id: "OD"
+          yt-column-triggers: "Разработка"
+          yt-column-target: "Ревью"
