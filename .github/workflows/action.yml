@@ -15,5 +15,5 @@ jobs:
           yt-token: ${{ secrets.YOUTRACK_TOKEN }}
           yt-column-field: "Stage"
           yt-project-id: "OD"
-          yt-column-triggers: "Разработка"
-          yt-column-target: "Ревью"
+          yt-column-triggers: "Develop, In progress"
+          yt-column-target: "Review"
